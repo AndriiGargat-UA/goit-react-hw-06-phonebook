@@ -1,13 +1,13 @@
 import { useDispatch } from 'react-redux';
 import { InputContainer } from './Filter.styled';
-import { filter } from 'redux/filterSlice';
+import { addFilter } from 'redux/filterSlice';
 
 export const Filter = () => {
   const dispatch = useDispatch();
 
-  const handleFilter = ({target: {value}}) => {
-    dispatch(filter(value));
-  }
+  const handleFilter = ({ target: { value } }) => {
+    dispatch(addFilter(value));
+  };
 
   return (
     <InputContainer>
